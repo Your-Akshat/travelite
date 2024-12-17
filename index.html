@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>TraveLite | Expense Splitting Made Simple</title>
+        <link rel="shortcut icon" href="assets/icon.png" type="image/x-icon">
+        <link rel="stylesheet" href="output.css">
+    </head>
+    
+    <body class="bg-gray-800 text-white min-h-screen min-w-full px-12 py-16 mobile:px-4">
+        <div id="hero" class="flex flex-row flex-wrap items-center justify-evenly">
+        
+        <div >
+            <h1 class="text-lime-300 text-9xl tablet:text-8xl text-center font-bold">T<span class="text-orange-200">r</span><span class="text-rose-300">a</span><span class="text-purple-100">v</span>e<span class="text-orange-200">L</span><span class="text-rose-300">i</span><span class="text-purple-100">t</span>e<span class="mobile:hidden">🛫</span> </h1>
+            <h3 class="text-fuchsia-300 text-5xl tablet:text-4xl text-center font-medium">Expense Splitting Made Simple</h3>
+            
+            <form class="py-12">
+                <fieldset class="border-white p-2 border-2 rounded-lg">
+                    <div class="py-4 pl-2 flex flex-row justify-evenly mobile:flex-col">
+                        <div class="mobile:my-2">Name: <input type="text" name="name" id="name" class="text-black" ></div> 
+                        <div class="mobile:my-2">Expense (in Rs): <input type="text" name="amount" id="amount" class="text-black"></div>
+                    </div>
+                    <div class="mx-40 mobile:mx-20">
+                        <button id="addElement" class="bg-white py-1 px-3 mx-2 mobile:mx-0 my-4 text-black border rounded-lg">Add Expense</button>
+                        <button id="showButton" class="bg-white py-1 px-3 mx-2 mobile:mx-0 my-4 text-black border rounded-lg">Clear All</button>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+
+        <img src="assets/pic.png" class="tablet:hidden h-96">
+
+    </div>
+    
+    <div id="tableSpace" class="md:flex md:flex-wrap md:flex-row items-center justify-evenly ">
+        <table id="myTable" class="tablet:mx-auto my-6 min-w-96 text-center">
+            <tr class="m-6">
+                <th class="m-12 px-10 border-2 border-white text-xl">Name</th>
+                <th class="m-6 px-5 border-2 border-white text-xl">Amount</th>
+            </tr>
+        </table>
+        <div id="displayTotal" class="tablet:text-center text-2xl mx-0"></div>
+    </div>
+
+    <br>
+    
+    <form action="">
+        <div class="p-4 flex mobile:flex-row flex-col flex-wrap justify-evenly items-center">
+            <div> Number of Individuals: <input type="text" name="count" id="count" class="text-black" size="5"></div>
+            <button id="showSplit" class="bg-white py-1 px-3 mx-2 mobile:my-2 my-4 text-black border rounded-lg">Split Expenses</button>
+        </div>
+    </form>
+    
+    <div id="individualPays" class="text-center mobile:w-96 text-white font-normal text-2xl"></div>
+    
+</body>
+<script src="script.js"></script>
+</html>
